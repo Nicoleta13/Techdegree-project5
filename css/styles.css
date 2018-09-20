@@ -1,0 +1,102 @@
+/*Base rules  */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: auto;
+}
+
+
+/* Layout rules */
+
+.form-search {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.search {
+  width: 50%;
+  border-radius: 3px;
+}
+
+.photos {
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 20px;
+}
+
+
+
+/* Flexbox settings */
+.photos {
+	display: flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:space-around;
+}
+
+img {
+	margin-bottom: 20px;
+}
+
+
+
+/*  Media Querries*/
+
+@media(min-width: 440px ) {
+	.photos {
+		padding-top: 30px;
+		margin-left: 2%;
+		margin-right: 2%;
+	}
+}
+
+
+@media(min-width: 652px ) {
+	.search {
+		width: 40%;
+	}
+	.photos {
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+
+
+@media(min-width: 905px ) {
+	.photos {
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+}
+
+@media(min-width: 1035px ) {
+
+	.search {
+		width: 30%;
+	}
+
+	.photos {
+		margin-left: 12%;
+	}
+
+	.photos a {
+		flex: 1 25%;
+	}
+}
+
+
+/* Changes in lightbox.css */
+
+.lightbox .lb-image {
+  /* Image border */
+	border-radius: 0;
+  border: none;
+	border-left: none;
+}
+
+.lightboxOverlay {
+	z-index: 10000;
+}
